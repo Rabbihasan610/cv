@@ -1,287 +1,507 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD RABBI HASAN - Resume</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #333;
+            background-color: white;
+            padding: 0;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: none;
+            }
+            
+            /* Ensure proper page breaks */
+            .page-break {
+                page-break-before: always;
+            }
+            
+            /* Hide non-essential elements */
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Layout */
+        .container {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            padding: 0.4in;
+        }
+
+        .card {
+            background: white;
+            height: 100%;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        /* Header Section */
+        .profile-header {
+            display: flex;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info h1 {
+            font-size: 22px;
+            margin-bottom: 4px;
+            color: #2c3e50;
+        }
+
+        .profile-info p {
+            margin-bottom: 2px;
+            font-size: 10px;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 120px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #bbc0c4;
+        }
+
+        /* Professional Objective */
+        .pro-obj p {
+            text-align: justify;
+            font-size: 11px;
+        }
+
+        /* Work Experience & Projects */
+        .work-exp ul, .projects-list {
+            list-style: none;
+        }
+
+        .work-exp li, .project-item {
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+        }
+
+        .work-exp li:last-child, .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 12px;
+        }
+
+        .company {
+            color: #3498db;
+            font-size: 11px;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 10px;
+            margin-top: 2px;
+        }
+
+        .work-exp p, .project-item p {
+            margin-top: 4px;
+            font-size: 10px;
+        }
+
+        .project-item a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        /* Skills Table */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 6px;
+            font-size: 10px;
+        }
+
+        .skills-table th, .skills-table td {
+            border: 1px solid #ddd;
+            padding: 6px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .skills-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .skills-table ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skills-table li {
+            margin-bottom: 4px;
+            position: relative;
+            padding-left: 12px;
+            font-size: 10px;
+        }
+
+        .skills-table li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Academic Qualification */
+        .academic-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+            font-size: 11px;
+        }
+
+        .institution {
+            color: #3498db;
+            margin-bottom: 3px;
+            font-size: 11px;
+        }
+
+        .academic-details p {
+            margin-bottom: 2px;
+            font-size: 10px;
+        }
+
+        /* Personal Information */
+        .personal-info .info-row {
+            display: flex;
+            margin-bottom: 4px;
+        }
+
+        .info-label {
+            width: 120px;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .info-value {
+            flex: 1;
+            font-size: 10px;
+        }
+
+        /* References */
+        .reference-item {
+            margin-bottom: 8px;
+        }
+
+        .reference-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 11px;
+        }
+
+        .reference-position {
+            color: #7f8c8d;
+            margin-bottom: 3px;
+            font-size: 10px;
+        }
+
+        /* Declaration & Signature */
+        .declaration p {
+            font-style: italic;
+            text-align: justify;
+            font-size: 10px;
+        }
+
+        .signature {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .signature img {
+            width: 60px;
+            margin-right: 10px;
+        }
+
+        .signature p {
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        /* Two-column layout for certain sections */
+        .two-column {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .two-column > div {
+            flex: 1;
+        }
+        
+        /* Compact layout adjustments */
+        .compact-section {
+            margin-bottom: 8px;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <div class="card">
+            <!-- Header Section -->
+            <div class="profile-header">
+                <div class="profile-info">
+                    <h1>MD RABBI HASAN</h1>
+                    <p>Address: House No #02, Fultola, Panchagarh, Panchagarh-5000</p>
+                    <p>Mobile No: 01710528972 | E-mail: mdrabbihasan610@gmail.com</p>
+                    <p>Github: https://github.com/Rabbihasan610</p>
+                </div>
+                <div class="profile-image">
+                    <img src="./assets/img/rabbi.jpg" alt="MD RABBI HASAN">
+                </div>
+            </div>
 
-	<div class="container">
-		<div class="row">
+            <!-- Professional Objective -->
+            <div class="content-section compact-section">
+                <h2 class="section-title">Professional Objective</h2>
+                <div class="pro-obj">
+                    <p>As an experienced Laravel developer with 1+ years of experience. My goal is to gain hands-on experience in Laravel development and contribute to a dynamic team of developers. I am eager to apply my knowledge of Laravel, PHP, and MySQL to build high-quality web applications and enhance my skills in web development and software engineering. I am a quick learner, a team player, and willing to take on new challenges to further my career in web development.</p>
+                </div>
+            </div>
 
-			<div class="col-12">
-				<div class="card">
-					<div class="row">
-						<div class="col-8">
-							<div class="profile">
-								<p>Resume of</p>
-								<h2>MD RABBI HASAN</h2>
-								<p>Address: House No #02, Fultola, Panchagarh, Panchagarh-5000</p>
-								<p>Mobil No: 01710528972</p>
-								<p>E-mail: mdrabbihasan610@gmail.com</p>
-								<p>Github: https://github.com/Rabbihasan610</p>
-							</div>
-						</div>
+            <!-- Two-column layout for Work Experience and Projects -->
+            <div class="two-column">
+                <!-- Work Experience -->
+                <div class="content-section compact-section">
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="work-exp">
+                        <ul>
+                            <li>
+                                <div class="job-title">Junior Backend Developer</div>
+                                <div class="company">Desktop IT</div>
+                                <div class="date">25-08-2022 - 30-04-2023</div>
+                                <p>Assisted in developing and maintaining backend features for web applications. Worked closely with senior developers to implement new functionalities.</p>
+                            </li>
+                            <li>
+                                <div class="job-title">Backend Developer</div>
+                                <div class="company">Topfnf Identity Inc.</div>
+                                <div class="date">25-03-2023 - Present</div>
+                                <p>Developed and implemented robust APIs for web applications. Implemented new features while adhering to coding best practices.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-						<div class="col-4">
-							<div class="profile-image">
-								<img src="./assets/img/rabbi.jpg" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="side-right">
-						<div class="pro-obj">
-							<h3>Professinal Objective: </h3>
-							<p>As an experienced Laravel developer with 1+ years of experience. My goal is to gain hands-on experience in
-								Laravel development and contribute to a dynamic team of developers. I am eager to apply
-								my knowledge of Laravel, PHP, and MySQL to build high-quality web applications and
-								enhance my skills in web development and software engineering. I am a quick learner, a
-								team player, and willing to take on new challenges to further my career in web
-								development.</p>
-						</div>
+                <!-- Projects -->
+                <div class="content-section compact-section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-list">
+                        <div class="project-item">
+                            <div class="job-title">Payvill</div>
+                            <div><a href="https://resume.payvill.com">resume.payvill.com</a></div>
+                            <p>Toronto-based company focused on e-commerce and online marketplace.</p>
+                        </div>
+                        <div class="project-item">
+                            <div class="job-title">Safincu</div>
+                            <div><a href="https://safincu.economicinc.com">https://safincu.economicinc.com</a></div>
+                            <p>E-commerce with content</p>
+                        </div>
+                        
+                        <div class="project-item">
+                            <div class="job-title">Green</div>
+                            <div><a href="http://gree.vfincu.com/">http://gree.vfincu.com/</a></div>
+                            <p>E-commerce with content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-						<div class="work-exp" style="margin-top: 15px;">
-							<h3>Work Experience:</h3>
-							<ul>
-								<li>
-									<strong>Desktop IT</strong> - Junior Backend Developer (25-08-2022 - 30-04-2023)
-									<p>Assisted in developing and maintaining backend features for web applications.
-										Worked closely with senior developers to implement new functionalities.
-										Participated in code reviews and collaborated on improving code quality.
-									</p>
-								</li>
-								<li>
-									<strong>Topfnf Identity Inc. </strong> - Backend Developer (25-03-2023 - )
-									<p>Developed and implemented robust APIs for web applications to enable seamless
-										data communication between front-end and back-end.
-										Implemented new features and functionality in existing codebase while adhering
-										to coding best practices and standards.
-									</p>
-								</li>
-							</ul>
+            <!-- Skills -->
+            <div class="content-section compact-section">
+                <h2 class="section-title">Fields of Specialization</h2>
+                <table class="skills-table">
+                    <tr>
+                        <th>Skills</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Vue.js</li>
+                                <li>PHP</li>
+                                <li>Website Development Using Laravel</li>
+                                <li>Rest API Creation</li>
+                                <li>Back-End Development</li>
+                                <li>SQL Query</li>
+                                <li>Database MySQL</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Modular Architecture and module-based large SPA.</li>
+                                <li>Solid knowledge of PHP OOP & MVC.</li>
+                                <li>Website development using Laravel</li>
+                                <li>Ensure databases are simple and easy to read.</li>
+                                <li>Strong knowledge about Back-End and Front-End technologies</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-							<h3>Projects:</h3>
-							<ul>
-								<li>
-									<strong>Payvill</strong> - <a href="https://resume.payvill.com">https://resume.payvill.com</a>
-									<p>Payvill is a Toronto-based company focused on making a direct impact on the
-										e-commerce and online marketplace. Working in conjunction with local businesses,
-										Payvill aims to facilitate the connection between customers and the most
-										reliable businesses in their local area</p>
-								</li>
-								<li>
-									<strong>Dishnet</strong> - <a href="https://desktopit.org/dishnet">https://desktopit.org/dishnet</a>
-									<p>Dishnet is a versatile app serving as a bill collection platform and an employee/customer management application. It simplifies the payment process by automating bill collection and invoicing while providing real-time updates and notifications to both customers and administrators. </p>
-								</li>
-								<li>
-									<strong>Shikkhasoft</strong> - <a href="http://shikkhasoft.com">http://shikkhasoft.com</a>
-									<p>Shikkhasoft is a comprehensive school management system designed to streamline and enhance various aspects of educational institutions. It offers a wide range of modules and features, including academic, student, attendance, exam, result, account, inventory, library, teacher, and student admin panels </p>
-								</li>
-							</ul>
+            <!-- Two-column layout for Academic and Personal Info -->
+            <div class="two-column">
+                <!-- Academic Qualification -->
+                <div class="content-section compact-section">
+                    <h2 class="section-title">Academic Qualification</h2>
+                    <div class="academic-item">
+                        <div class="degree">Diploma in Computer Engineering</div>
+                        <div class="institution">Thakurgaon Polytechnic Institute</div>
+                        <div class="academic-details">
+                            <p>Concentration: Computer Technology</p>
+                            <p>CGPA: 3.61/4.00 | Passing year: 2021</p>
+                        </div>
+                    </div>
+                    <div class="academic-item">
+                        <div class="degree">Secondary School Certificate</div>
+                        <div class="institution">Nuton Bandar Banghari High School</div>
+                        <div class="academic-details">
+                            <p>Concentration: Science</p>
+                            <p>GPA: 4.23/5.00 | Passing year: 2017</p>
+                        </div>
+                    </div>
+                </div>
 
-						</div>
+                <!-- Personal Information -->
+                <div class="content-section compact-section">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="personal-info">
+                        <div class="info-row">
+                            <div class="info-label">Father's Name</div>
+                            <div class="info-value">: Md. Ismail Hossian</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Mother's Name</div>
+                            <div class="info-value">: Most. Khateza Khatun</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Date of Birth</div>
+                            <div class="info-value">: 09 December, 2000</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Nationality</div>
+                            <div class="info-value">: Bangladeshi</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Religion</div>
+                            <div class="info-value">: Islam</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Blood Group</div>
+                            <div class="info-value">: A+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-						<div class="academic" style="margin-top: 15px;">
-							<div class="work-exp">
-								<table style="width: 100%; padding: 20px; margin: 15px 0px;" border="1">
-									<tr>
-										<th>Fields of Specialization</th>
-										<th>Description</th>
-									</tr>
-									<tr>
-										<td>
-											<ul>
-												<li>Vue.js</li>
-												<li>PHP</li>
-												<li>Website Development Using Laravel</li>
-												<li>Rest API Creation</li>
-												<li>Back-End Development</li>
-												<li>SQL Query</li>
-												<li>Database MySQL</li>
-											</ul>
-										</td>
-										<td>
-											<ul>
-												<li>Modular Architecture and module-based large SPA.</li>
-												<li>Solid knowledge of PHP OOP & MVC.</li>
-												<li>Website development using Laravel (Create new website, Update Old
-													Website, Restful API for Mobile applications, Back-End for Ecommerce
-													store)</li>
-												<li>Ensure the databases are simple and easy to read.</li>
-												<li>Strong knowledge about Back-End (Laravel Framework) Front-End (HTML,
-													CSS, JavaScript, jQuery, Bootstrap)</li>
-											</ul>
-										</td>
-									</tr>
-								</table>
+            <!-- Two-column layout for References and Declaration -->
+            <div class="two-column">
+                <!-- References -->
+                <div class="content-section compact-section">
+                    <h2 class="section-title">References</h2>
+                    <div class="reference-item">
+                        <div class="reference-name">H M MOHIDUL ISLAM</div>
+                        <div class="reference-position">Backend Developer at Identity Inc.</div>
+                        <p>302 Spadina Ave, Toronto, ON M5T 2E7, Canada</p>
+                        <p>Mob: +880 1675-955487</p>
+                    </div>
+                </div>
 
-							</div>
-						</div>
-
-						<div class="academic" style="margin-top: 15px;">
-							<h3>academic qualification:</h3>
-							<div class="aca">
-							  <div class="row">
-								<div class="col-4">
-								  <h5 style="text-align: left;">Diploma in Computer Engineering</h5>
-								</div>
-								<div class="col-8">
-								  <div class="school">
-									<h5 style="text-align: left;">Thakurgaon Polytechnic Institute</h5>
-									<p><span>Concentration: </span>Computer Technology</p>
-									<p><span>CGPA: </span>3.61 out of 4.00</p>
-									<p><span>Passing year: </span>2021</p>
-								  </div>
-								</div>
-							  </div>
-							  <div class="row">
-								<div class="col-4">
-								  <h5 style="text-align: left;">Secondary School Certificate</h4>
-								</div>
-								<div class="col-8">
-								  <div class="school">
-									<h5 style="text-align: left;">Nuton Bandar Banghari High School</h5>
-									<p><span>Concentration: </span>Science</p>
-									<p><span>GPA: </span>4.23 out of 5.00</p>
-									<p><span>Passing year: </span>2017</p>
-								  </div>
-								</div>
-							  </div>
-							</div>
-						  </div>
-						  
-
-						<div class="personal" style="margin-top: 15px;">
-							<h3>Personal information</h3>
-							<div class="per">
-								<div class="row">
-									<div class="col-4">
-										<p>Father's Name</p>
-									</div>
-									<div class="col-8">
-										<p>: Md. Ismail Hossian </p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<p>Mother's Name</p>
-									</div>
-									<div class="col-8">
-										<p>: Most. Khateza Khatun </p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<p>Date of Birth</p>
-									</div>
-									<div class="col-8">
-										<p>: 09 Decembar, 2000 </p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<p>Nationalit</p>
-									</div>
-									<div class="col-8">
-										<p>: Bangladesi</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<p> Religion </p>
-									</div>
-									<div class="col-8">
-										<p>: Islam</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<p> Sex </p>
-									</div>
-									<div class="col-8">
-										<p>: Male</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<p> Blood Group </p>
-									</div>
-									<div class="col-8">
-										<p>: A+</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<p> Permanent Address </p>
-									</div>
-									<div class="col-8">
-										<p>: Vill: Sunduri Pukuri, Fulltola Hat, Boda, Panchagarh-5000</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<p> Present Address </p>
-									</div>
-									<div class="col-8">
-										<p>: House No #02, Fultola, Panchagarh, Panchagarh-5000</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="referange">
-							<h3>REFERENCES : </h3>
-							<div class="ref">
-								<div class="row">
-									<div class="col-6">
-										<h5 style="text-align: left;">H M MOHIDUL ISLAM</h5>
-										<p>Backend Developer at Identity Inc.</p>
-										<p>302 Spadina Ave, Toronto, ON M5T 2E7, Canada, Toronto, ON, Canada.</p>
-										<p><span>Mob: </span> +880 1675-955487</p>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-						<div class="referange">
-							<h3>DECLARATION : </h3>
-							<div class="ref">
-								<div class="row">
-									<div class="col-12">
-										<p>I, the undersigned, certify that, to the best of my knowledge and belief,
-											this resume accurately describes my qualifications and myself. I understand
-											that any deliberate misstatement provided herein may result in
-											disqualification or dismissal if employed.</p>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-						<div class="referange">
-							<h3>SIGNATURE: </h3>
-							<div class="ref">
-								<div class="row" style="margin-top:20px;">
-									<div class="col-12">
-										<img style="width: 50px;height: 40px;" src="./assets/img/signature.jpg" alt="">
-										<p style="text-align: left;">Md Rabbi Hasan</p>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
+                <!-- Declaration & Signature -->
+                <div class="content-section compact-section">
+                    <h2 class="section-title">Declaration</h2>
+                    <div class="declaration">
+                        <p>I, the undersigned, certify that, to the best of my knowledge and belief, this resume accurately describes my qualifications and myself. I understand that any deliberate misstatement provided herein may result in disqualification or dismissal if employed.</p>
+                    </div>
+                    <div class="signature">
+                        <img src="./assets/img/signature.jpg" alt="Signature">
+                        <p>Md Rabbi Hasan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>

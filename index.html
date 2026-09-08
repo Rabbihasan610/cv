@@ -1,507 +1,685 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD RABBI HASAN - Resume</title>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="ATS-targeted CV of Md Rabbi Hasan for the Mid-Level PHP Developer position at Byteshake Limited.">
+  <meta name="author" content="Md Rabbi Hasan">
+  <title>Md Rabbi Hasan - Mid-Level PHP Developer CV</title>
+  <style>
+    :root {
+      --ink: #171717;
+      --muted: #4a4a4a;
+      --accent: #164e63;
+      --line: #b8c4c9;
+      --paper: #fff;
+      --screen: #e8ecef;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 12px;
-            line-height: 1.4;
-            color: #333;
-            background-color: white;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        /* Print-specific styles */
-        @media print {
-            body {
-                margin: 0;
-                padding: 0;
-                background: white;
-            }
-            
-            .container {
-                box-shadow: none;
-                margin: 0;
-                padding: 0;
-            }
-            
-            .card {
-                box-shadow: none;
-                border: none;
-            }
-            
-            /* Ensure proper page breaks */
-            .page-break {
-                page-break-before: always;
-            }
-            
-            /* Hide non-essential elements */
-            .no-print {
-                display: none;
-            }
-        }
+    html {
+      background: var(--screen);
+    }
 
-        /* Layout */
-        .container {
-            width: 8.5in;
-            height: 11in;
-            margin: 0 auto;
-            padding: 0.4in;
-        }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--screen);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.34;
+    }
 
-        .card {
-            background: white;
-            height: 100%;
-        }
+    a {
+      color: inherit;
+    }
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
+    .screen-tools,
+    .analysis-report {
+      width: min(8.27in, calc(100% - 32px));
+      margin: 16px auto;
+    }
 
-        .col-12 {
-            width: 100%;
-        }
+    .screen-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        .col-8 {
-            width: 66.66%;
-        }
+    .screen-tools p {
+      margin: 0;
+      font-size: 9.5pt;
+      color: var(--muted);
+    }
 
-        .col-6 {
-            width: 50%;
-        }
+    button {
+      border: 0;
+      border-radius: 4px;
+      padding: 10px 16px;
+      background: var(--accent);
+      color: #fff;
+      font: 700 10pt Arial, Helvetica, sans-serif;
+      cursor: pointer;
+    }
 
-        .col-4 {
-            width: 33.33%;
-        }
+    .analysis-report {
+      padding: 24px 28px;
+      border: 1px solid #c9d0d4;
+      background: #fff;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+    }
 
-        /* Header Section */
-        .profile-header {
-            display: flex;
-            padding-bottom: 12px;
-            margin-bottom: 12px;
-        }
+    .analysis-report h2 {
+      margin: 0 0 12px;
+      font-size: 16pt;
+      color: var(--accent);
+    }
 
-        .profile-info {
-            flex: 1;
-        }
+    .analysis-report h3 {
+      margin: 18px 0 6px;
+      font-size: 11.5pt;
+    }
 
-        .profile-info h1 {
-            font-size: 22px;
-            margin-bottom: 4px;
-            color: #2c3e50;
-        }
+    .analysis-report p {
+      margin: 0 0 8px;
+    }
 
-        .profile-info p {
-            margin-bottom: 2px;
-            font-size: 10px;
-        }
+    .analysis-report ul {
+      margin: 5px 0 0;
+      padding-left: 20px;
+    }
 
-        .profile-image {
-            width: 100px;
-            height: 120px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-        }
+    .analysis-report li {
+      margin: 3px 0;
+    }
 
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .score {
+      font-size: 18pt;
+      font-weight: 700;
+      color: var(--accent);
+    }
 
-        /* Content Sections */
-        .content-section {
-            margin-bottom: 12px;
-        }
+    .plain-text {
+      margin: 8px 0 0;
+      padding: 14px;
+      overflow: auto;
+      border: 1px solid #d8dee1;
+      background: #f7f9fa;
+      color: #222;
+      font: 9pt/1.42 Consolas, "Courier New", monospace;
+      white-space: pre-wrap;
+    }
 
-        .section-title {
-            font-size: 14px;
-            color: #2c3e50;
-            margin-bottom: 8px;
-            padding-bottom: 4px;
-            border-bottom: 1px solid #bbc0c4;
-        }
+    .cv-document {
+      margin: 0 auto 28px;
+    }
 
-        /* Professional Objective */
-        .pro-obj p {
-            text-align: justify;
-            font-size: 11px;
-        }
+    .cv-page {
+      width: 8.27in;
+      height: 11.69in;
+      margin: 0 auto 18px;
+      padding: .50in .60in .47in;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
+    }
 
-        /* Work Experience & Projects */
-        .work-exp ul, .projects-list {
-            list-style: none;
-        }
+    .name {
+      margin: 0;
+      font-size: 18pt;
+      line-height: 1.1;
+      letter-spacing: .2px;
+      text-align: center;
+      text-transform: uppercase;
+    }
 
-        .work-exp li, .project-item {
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-        }
+    .contact {
+      margin: 5px 0 0;
+      font-size: 9.4pt;
+      line-height: 1.4;
+      text-align: center;
+      font-weight: 600;
+    }
 
-        .work-exp li:last-child, .project-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
+    .contact-line {
+      display: block;
+      white-space: nowrap;
+    }
 
-        .job-title {
-            font-weight: bold;
-            color: #2c3e50;
-            font-size: 12px;
-        }
+    .contact strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
 
-        .company {
-            color: #3498db;
-            font-size: 11px;
-        }
+    .target-title {
+      margin: 10px 0 0;
+      padding: 7px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--accent);
+      font-size: 12.5pt;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+    }
 
-        .date {
-            color: #7f8c8d;
-            font-size: 10px;
-            margin-top: 2px;
-        }
+    section {
+      margin-top: 11px;
+    }
 
-        .work-exp p, .project-item p {
-            margin-top: 4px;
-            font-size: 10px;
-        }
+    h2.section-title {
+      margin: 0 0 5px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 11.5pt;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
 
-        .project-item a {
-            color: #3498db;
-            text-decoration: none;
-            font-size: 10px;
-        }
+    p {
+      margin: 0;
+    }
 
-        /* Skills Table */
-        .skills-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 6px;
-            font-size: 10px;
-        }
+    .summary {
+      line-height: 1.42;
+    }
 
-        .skills-table th, .skills-table td {
-            border: 1px solid #ddd;
-            padding: 6px;
-            text-align: left;
-            vertical-align: top;
-        }
+    .skills p {
+      margin: 2px 0;
+    }
 
-        .skills-table th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
+    .label {
+      font-weight: 700;
+    }
 
-        .skills-table ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+    .job {
+      margin-top: 8px;
+      break-inside: avoid;
+    }
 
-        .skills-table li {
-            margin-bottom: 4px;
-            position: relative;
-            padding-left: 12px;
-            font-size: 10px;
-        }
+    .job:first-of-type {
+      margin-top: 0;
+    }
 
-        .skills-table li:before {
-            content: "•";
-            color: #3498db;
-            position: absolute;
-            left: 0;
-        }
+    .job-heading {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      justify-content: space-between;
+    }
 
-        /* Academic Qualification */
-        .academic-item {
-            margin-bottom: 10px;
-        }
+    .job-heading h3,
+    .project h3 {
+      margin: 0;
+      font-size: 10.5pt;
+      line-height: 1.25;
+    }
 
-        .degree {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 3px;
-            font-size: 11px;
-        }
+    .job-heading time {
+      flex: 0 0 auto;
+      font-size: 9.5pt;
+      font-weight: 700;
+    }
 
-        .institution {
-            color: #3498db;
-            margin-bottom: 3px;
-            font-size: 11px;
-        }
+    .company {
+      margin: 1px 0 2px;
+      color: var(--muted);
+      font-weight: 700;
+    }
 
-        .academic-details p {
-            margin-bottom: 2px;
-            font-size: 10px;
-        }
+    ul {
+      margin: 3px 0 0;
+      padding-left: 17px;
+    }
 
-        /* Personal Information */
-        .personal-info .info-row {
-            display: flex;
-            margin-bottom: 4px;
-        }
+    li {
+      margin: 2px 0;
+      padding-left: 1px;
+    }
 
-        .info-label {
-            width: 120px;
-            font-weight: bold;
-            font-size: 10px;
-        }
+    .project {
+      margin-top: 9px;
+      break-inside: avoid;
+    }
 
-        .info-value {
-            flex: 1;
-            font-size: 10px;
-        }
+    .project:first-of-type {
+      margin-top: 0;
+    }
 
-        /* References */
-        .reference-item {
-            margin-bottom: 8px;
-        }
+    .project-url {
+      margin: 1px 0 3px;
+      font-size: 9.3pt;
+      overflow-wrap: anywhere;
+    }
 
-        .reference-name {
-            font-weight: bold;
-            color: #2c3e50;
-            font-size: 11px;
-        }
+    .project p+p {
+      margin-top: 2px;
+    }
 
-        .reference-position {
-            color: #7f8c8d;
-            margin-bottom: 3px;
-            font-size: 10px;
-        }
+    .education-item {
+      margin: 4px 0;
+    }
 
-        /* Declaration & Signature */
-        .declaration p {
-            font-style: italic;
-            text-align: justify;
-            font-size: 10px;
-        }
+    .education-item strong {
+      font-size: 10.5pt;
+    }
 
-        .signature {
-            display: flex;
-            align-items: center;
-            margin-top: 8px;
-        }
+    .languages {
+      margin-top: 4px;
+    }
 
-        .signature img {
-            width: 60px;
-            margin-right: 10px;
-        }
+    @media screen and (max-width: 850px) {
+      .cv-page {
+        width: 100%;
+        height: auto;
+        min-height: 11.69in;
+        box-shadow: none;
+      }
 
-        .signature p {
-            font-weight: bold;
-            font-size: 12px;
-        }
+      .contact-line {
+        white-space: normal;
+      }
+    }
 
-        /* Two-column layout for certain sections */
-        .two-column {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .two-column > div {
-            flex: 1;
-        }
-        
-        /* Compact layout adjustments */
-        .compact-section {
-            margin-bottom: 8px;
-        }
-    </style>
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+
+      .screen-only {
+        display: none !important;
+      }
+
+      .cv-document {
+        margin: 0;
+      }
+
+      .cv-page {
+        width: 8.27in;
+        height: 11.69in;
+        margin: 0;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .cv-page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="card">
-            <!-- Header Section -->
-            <div class="profile-header">
-                <div class="profile-info">
-                    <h1>MD RABBI HASAN</h1>
-                    <p>Address: House No #02, Fultola, Panchagarh, Panchagarh-5000</p>
-                    <p>Mobile No: 01710528972 | E-mail: mdrabbihasan610@gmail.com</p>
-                    <p>Github: https://github.com/Rabbihasan610</p>
-                </div>
-                <div class="profile-image">
-                    <img src="./assets/img/rabbi.jpg" alt="MD RABBI HASAN">
-                </div>
-            </div>
+  <div class="screen-tools screen-only">
+    <p>Print layout: two A4 pages, selectable text, single-column ATS format.</p>
+    <button type="button" onclick="window.print()">Export CV as PDF</button>
+  </div>
 
-            <!-- Professional Objective -->
-            <div class="content-section compact-section">
-                <h2 class="section-title">Professional Objective</h2>
-                <div class="pro-obj">
-                    <p>As an experienced Laravel developer with 1+ years of experience. My goal is to gain hands-on experience in Laravel development and contribute to a dynamic team of developers. I am eager to apply my knowledge of Laravel, PHP, and MySQL to build high-quality web applications and enhance my skills in web development and software engineering. I am a quick learner, a team player, and willing to take on new challenges to further my career in web development.</p>
-                </div>
-            </div>
+  <section class="analysis-report screen-only" aria-labelledby="analysis-heading">
+    <h2 id="analysis-heading">Byteshake Limited Job-Match Analysis</h2>
+    <p><span class="score">92%</span> overall match based only on the supplied CV.</p>
 
-            <!-- Two-column layout for Work Experience and Projects -->
-            <div class="two-column">
-                <!-- Work Experience -->
-                <div class="content-section compact-section">
-                    <h2 class="section-title">Work Experience</h2>
-                    <div class="work-exp">
-                        <ul>
-                            <li>
-                                <div class="job-title">Junior Backend Developer</div>
-                                <div class="company">Desktop IT</div>
-                                <div class="date">25-08-2022 - 30-04-2023</div>
-                                <p>Assisted in developing and maintaining backend features for web applications. Worked closely with senior developers to implement new functionalities.</p>
-                            </li>
-                            <li>
-                                <div class="job-title">Backend Developer</div>
-                                <div class="company">Topfnf Identity Inc.</div>
-                                <div class="date">25-03-2023 - Present</div>
-                                <p>Developed and implemented robust APIs for web applications. Implemented new features while adhering to coding best practices.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <h3>1. Overall job-match score</h3>
+    <p><strong>92/100 - strong match.</strong> The CV verifies more than three years of relevant development experience
+      and directly supports PHP, Laravel, MySQL, SQL, REST APIs, OOP, Git, GitHub, HTML, CSS, and JavaScript. It also
+      demonstrates production debugging, deployment support, third-party integrations, and business-system development.
+    </p>
 
-                <!-- Projects -->
-                <div class="content-section compact-section">
-                    <h2 class="section-title">Projects</h2>
-                    <div class="projects-list">
-                        <div class="project-item">
-                            <div class="job-title">Payvill</div>
-                            <div><a href="https://resume.payvill.com">resume.payvill.com</a></div>
-                            <p>Toronto-based company focused on e-commerce and online marketplace.</p>
-                        </div>
-                        <div class="project-item">
-                            <div class="job-title">Safincu</div>
-                            <div><a href="https://safincu.economicinc.com">https://safincu.economicinc.com</a></div>
-                            <p>E-commerce with content</p>
-                        </div>
-                        
-                        <div class="project-item">
-                            <div class="job-title">Green</div>
-                            <div><a href="http://gree.vfincu.com/">http://gree.vfincu.com/</a></div>
-                            <p>E-commerce with content</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <h3>2. Missing or weak keywords</h3>
+    <ul>
+      <li><strong>CodeIgniter:</strong> not supported by the current CV; correctly omitted.</li>
+      <li><strong>WordPress/WooCommerce:</strong> not supported by the current CV; correctly omitted.</li>
+      <li><strong>Git workflow detail:</strong> Git and GitHub are verified, but branches, pull requests, merge reviews,
+        and named team workflows are not described.</li>
+      <li><strong>Testing detail:</strong> testing and regression validation are supported, but named PHP testing tools
+        are not provided.</li>
+    </ul>
 
-            <!-- Skills -->
-            <div class="content-section compact-section">
-                <h2 class="section-title">Fields of Specialization</h2>
-                <table class="skills-table">
-                    <tr>
-                        <th>Skills</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>Vue.js</li>
-                                <li>PHP</li>
-                                <li>Website Development Using Laravel</li>
-                                <li>Rest API Creation</li>
-                                <li>Back-End Development</li>
-                                <li>SQL Query</li>
-                                <li>Database MySQL</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Modular Architecture and module-based large SPA.</li>
-                                <li>Solid knowledge of PHP OOP & MVC.</li>
-                                <li>Website development using Laravel</li>
-                                <li>Ensure databases are simple and easy to read.</li>
-                                <li>Strong knowledge about Back-End and Front-End technologies</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+    <h3>3. ATS and formatting problems found</h3>
+    <ul>
+      <li>The previous page used a sidebar, portrait, decorative framing, and split reading order.</li>
+      <li>References, AI-heavy material, and long project case studies displaced PHP-role keywords.</li>
+      <li>The LinkedIn label did not display its complete URL.</li>
+      <li>The prior title targeted a broader senior/full-stack profile instead of Byteshake Limited's mid-level PHP
+        role.</li>
+      <li>Project entries exceeded the requested concise description, contribution, and stack structure.</li>
+    </ul>
 
-            <!-- Two-column layout for Academic and Personal Info -->
-            <div class="two-column">
-                <!-- Academic Qualification -->
-                <div class="content-section compact-section">
-                    <h2 class="section-title">Academic Qualification</h2>
-                    <div class="academic-item">
-                        <div class="degree">Diploma in Computer Engineering</div>
-                        <div class="institution">Thakurgaon Polytechnic Institute</div>
-                        <div class="academic-details">
-                            <p>Concentration: Computer Technology</p>
-                            <p>CGPA: 3.61/4.00 | Passing year: 2021</p>
-                        </div>
-                    </div>
-                    <div class="academic-item">
-                        <div class="degree">Secondary School Certificate</div>
-                        <div class="institution">Nuton Bandar Banghari High School</div>
-                        <div class="academic-details">
-                            <p>Concentration: Science</p>
-                            <p>GPA: 4.23/5.00 | Passing year: 2017</p>
-                        </div>
-                    </div>
-                </div>
+    <h3>4. Information that needs confirmation</h3>
+    <ul>
+      <li>[INFORMATION NEEDED] Confirm a portfolio URL if one should appear in the contact section.</li>
+      <li>[INFORMATION NEEDED] Confirm whether you have WordPress, WooCommerce, or CodeIgniter experience; none has been
+        added.</li>
+      <li>[INFORMATION NEEDED] Confirm whether your Git collaboration included pull requests, branching, or code reviews
+        beyond the code-review practices already stated.</li>
+      <li>[INFORMATION NEEDED] Confirm whether Byteshake Limited supplied a fuller job description with responsibilities
+        beyond the listed requirements.</li>
+    </ul>
 
-                <!-- Personal Information -->
-                <div class="content-section compact-section">
-                    <h2 class="section-title">Personal Information</h2>
-                    <div class="personal-info">
-                        <div class="info-row">
-                            <div class="info-label">Father's Name</div>
-                            <div class="info-value">: Md. Ismail Hossian</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Mother's Name</div>
-                            <div class="info-value">: Most. Khateza Khatun</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Date of Birth</div>
-                            <div class="info-value">: 09 December, 2000</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Nationality</div>
-                            <div class="info-value">: Bangladeshi</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Religion</div>
-                            <div class="info-value">: Islam</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Blood Group</div>
-                            <div class="info-value">: A+</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <h3>5. Recommended changes applied</h3>
+    <ul>
+      <li>Retargeted the title and summary to PHP, Laravel, MySQL, REST APIs, OOP, maintenance, debugging, and
+        deployment support.</li>
+      <li>Reorganized verified skills into recruiter-friendly categories and kept optional unsupported technologies out.
+      </li>
+      <li>Condensed each position to three or four action-led bullets and selected the three most relevant Laravel
+        projects.</li>
+      <li>Removed the photo, sidebar, references, declaration, personal data, icons, graphics, and nonessential
+        material.</li>
+      <li>Converted the résumé to a two-page, single-column layout with complete searchable URLs.</li>
+    </ul>
 
-            <!-- Two-column layout for References and Declaration -->
-            <div class="two-column">
-                <!-- References -->
-                <div class="content-section compact-section">
-                    <h2 class="section-title">References</h2>
-                    <div class="reference-item">
-                        <div class="reference-name">H M MOHIDUL ISLAM</div>
-                        <div class="reference-position">Backend Developer at Identity Inc.</div>
-                        <p>302 Spadina Ave, Toronto, ON M5T 2E7, Canada</p>
-                        <p>Mob: +880 1675-955487</p>
-                    </div>
-                </div>
+    <h3>7. Plain-text ATS version</h3>
+    <pre class="plain-text">MD RABBI HASAN
+Address: Dhaka, Bangladesh
+Phone: +880 1710-528972
+Email: mdrabbihasan610@gmail.com
+LinkedIn: https://www.linkedin.com/in/md-rabbi-hasan-2229bb205
+GitHub: https://github.com/Rabbihasan610
 
-                <!-- Declaration & Signature -->
-                <div class="content-section compact-section">
-                    <h2 class="section-title">Declaration</h2>
-                    <div class="declaration">
-                        <p>I, the undersigned, certify that, to the best of my knowledge and belief, this resume accurately describes my qualifications and myself. I understand that any deliberate misstatement provided herein may result in disqualification or dismissal if employed.</p>
-                    </div>
-                    <div class="signature">
-                        <img src="./assets/img/signature.jpg" alt="Signature">
-                        <p>Md Rabbi Hasan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+MID-LEVEL PHP DEVELOPER | LARAVEL | MYSQL | REST APIS
+
+PROFESSIONAL SUMMARY
+PHP and Laravel developer with more than three years of relevant experience delivering and maintaining production applications across ERP, CRM, healthcare, civic services, billing, and logistics. Experienced with MySQL and SQL database workflows, RESTful API development and integration, object-oriented programming, and maintainable backend systems. Supports production issue diagnosis, debugging, releases, and deployment across Linux, VPS, and Nginx environments.
+
+TECHNICAL SKILLS
+Backend: PHP, Laravel, object-oriented programming (OOP), authentication, role-based access control, queues, background jobs
+Database: MySQL, SQL, Redis, caching, database workflows
+APIs and Integrations: RESTful APIs, third-party API integration, payment gateways, callbacks, webhooks
+Frontend: HTML5, CSS3, JavaScript, Vue.js, React, Bootstrap, Tailwind CSS, responsive UI design
+Development Tools: Git, GitHub, testing, debugging, regression validation, logging, monitoring
+Infrastructure: Linux, VPS deployment, Nginx, SSL, performance optimization
+Business Systems: ERP, CRM, HRM, healthcare, billing, invoicing, reporting, civic services, courier management
+
+PROFESSIONAL EXPERIENCE
+Full-Stack Developer | Riyadh Online | Jan 2024 - Present
+- Develop and maintain Laravel modules across CRM, ERP, union-service, courier-management, and template-based platforms.
+- Translate operational requirements into reusable services, RESTful APIs, role-based workflows, MySQL database processes, and reporting components.
+- Diagnose production issues, trace root causes, and implement controlled fixes that protect data integrity and existing business workflows.
+- Integrate third-party services and support technical changes, releases, and production deployment with product and operations stakeholders.
+
+Full-Stack Developer | TDevs | Jan 2023 - Oct 2023
+- Delivered client-specific HRM and CodeCanyon features after reviewing application architecture, dependencies, and customization constraints.
+- Designed and implemented payment gateway integrations covering callbacks, webhooks, transaction states, validation, and error handling.
+- Refactored Laravel modules and MySQL database logic to resolve functional and data defects and improve maintainability.
+
+Junior Developer | Desktop IT | Jun 2022 - Dec 2022
+- Collaborated with senior developers to implement and integrate application modules using established architecture and coding standards.
+- Investigated application and database defects and supported debugging, testing, regression validation, and release preparation.
+- Applied code-review feedback and participated in daily technical coordination to support consistent team delivery.
+
+SELECTED PROJECTS
+Aiyat Clinic Management Software
+URL: https://aiyat.com/
+Description: Clinic platform covering IPD, OPD, HR, payroll, billing, invoicing, sample collection, testing, and medical reports.
+Contribution: Developed modular Laravel services, connected patient, billing, and laboratory workflows, and implemented permissions and configurable reports.
+Technology: Laravel, PHP, MySQL, JavaScript, REST APIs, PDF and report generation
+
+Amlaek Real Estate Platform and Noorixa ERP
+URLs: https://amlaek.com/ | https://erp.amlaek.com/
+Description: Commercial real estate platform and ERP for projects, tasks, teams, time tracking, CRM, reports, and analytics.
+Contribution: Built role-based listing and service workflows and connected projects, tasks, time entries, customer records, and management reporting.
+Technology: Laravel, PHP, MySQL, JavaScript, REST APIs, RBAC, analytics, reporting
+
+UnionDesk and Khadim Nagar Union Parishad Portal
+URLs: https://khadimnagarup.com/ | https://uniondex.xyz/
+Description: Civic-service platform for certificates, application tracking, verification, holding tax, public information, and service records.
+Contribution: Built submission, review, approval, status tracking, verification, searchable-record, and report-generation workflows.
+Technology: Laravel, PHP, MySQL, JavaScript, role-based administration, document generation, reporting
+
+EDUCATION
+Diploma in Computer Engineering | Thakurgaon Polytechnic Institute | 2021 | CGPA 3.61/4.00
+Secondary School Certificate (Science) | Nouton Bandar Bangheri High School | 2017 | GPA 4.23/5.00
+
+LANGUAGES
+Bangla: Native
+English: Professional working proficiency</pre>
+
+    <h3>8. Final verification checklist</h3>
+    <ul>
+      <li>ATS-readable single-column structure and standard headings: verified.</li>
+      <li>Two-page A4 print layout with selectable text: verified in the exported PDF.</li>
+      <li>Contact details and complete LinkedIn, GitHub, and project URLs: verified against the supplied CV.</li>
+      <li>Employment dates, company names, education, and project names: preserved.</li>
+      <li>No unsupported CodeIgniter, WordPress, WooCommerce, achievements, or metrics: verified.</li>
+      <li>Content specifically targets Byteshake Limited's Mid-Level PHP Developer requirements: verified.</li>
+    </ul>
+
+    <h3>9. Suitable filename</h3>
+    <p><strong>Md_Rabbi_Hasan_Mid_Level_PHP_Developer_CV.pdf</strong></p>
+  </section>
+
+  <main class="cv-document" aria-label="Curriculum vitae of Md Rabbi Hasan">
+    <article class="cv-page" aria-label="CV page 1">
+      <header>
+        <h1 class="name">Md Rabbi Hasan</h1>
+        <p class="contact" aria-label="Contact information">
+          <span class="contact-line"><strong>Address:</strong> Dhaka, Bangladesh</span>
+          <span class="contact-line"><strong>Email:</strong> mdrabbihasan610@gmail.com</span>
+          <span class="contact-line"><strong>Phone:</strong> +880 1710-528972</span>
+          <span class="contact-line"><strong>LinkedIn:</strong>
+            https://www.linkedin.com/in/md-rabbi-hasan-2229bb205</span>
+          <span class="contact-line"><strong>GitHub:</strong> https://github.com/Rabbihasan610</span>
+        </p>
+        <p class="target-title">Mid-Level PHP Developer | Laravel | MySQL | REST APIs</p>
+      </header>
+
+      <section aria-labelledby="summary-title">
+        <h2 class="section-title" id="summary-title">Professional Summary</h2>
+        <p class="summary">PHP and Laravel developer with more than three years of relevant experience delivering and
+          maintaining production applications across ERP, CRM, healthcare, civic services, billing, and logistics.
+          Experienced with MySQL and SQL database workflows, RESTful API development and integration, object-oriented
+          programming, and maintainable backend systems. Supports production issue diagnosis, debugging, releases, and
+          deployment across Linux, VPS, and Nginx environments.</p>
+      </section>
+
+      <section class="skills" aria-labelledby="skills-title">
+        <h2 class="section-title" id="skills-title">Technical Skills</h2>
+        <p><span class="label">Backend:</span> PHP, Laravel, object-oriented programming (OOP), authentication,
+          role-based access control, queues, background jobs</p>
+        <p><span class="label">Database:</span> MySQL, SQL, Redis, caching, database workflows</p>
+        <p><span class="label">APIs and Integrations:</span> RESTful APIs, third-party API integration, payment
+          gateways, callbacks, webhooks</p>
+        <p><span class="label">Frontend:</span> HTML5, CSS3, JavaScript, Vue.js, React, Bootstrap, Tailwind CSS,
+          responsive UI design</p>
+        <p><span class="label">Development Tools:</span> Git, GitHub, testing, debugging, regression validation,
+          logging, monitoring</p>
+        <p><span class="label">Infrastructure:</span> Linux, VPS deployment, Nginx, SSL, performance optimization</p>
+        <p><span class="label">Business Systems:</span> ERP, CRM, HRM, healthcare, billing, invoicing, reporting, civic
+          services, courier management</p>
+      </section>
+
+      <section aria-labelledby="experience-title">
+        <h2 class="section-title" id="experience-title">Professional Experience</h2>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Full-Stack Developer</h3><time>Jan 2024 - Present</time>
+          </div>
+          <p class="company">Riyadh Online</p>
+          <ul>
+            <li>Develop and maintain Laravel modules across CRM, ERP, union-service, courier-management, and
+              template-based platforms.</li>
+            <li>Translate operational requirements into reusable services, RESTful APIs, role-based workflows, MySQL
+              database processes, and reporting components.</li>
+            <li>Diagnose production issues, trace root causes, and implement controlled fixes that protect data
+              integrity and existing business workflows.</li>
+            <li>Integrate third-party services and support technical changes, releases, and production deployment with
+              product and operations stakeholders.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Full-Stack Developer</h3><time>Jan 2023 - Oct 2023</time>
+          </div>
+          <p class="company">TDevs</p>
+          <ul>
+            <li>Delivered client-specific HRM and CodeCanyon features after reviewing application architecture,
+              dependencies, and customization constraints.</li>
+            <li>Designed and implemented payment gateway integrations covering callbacks, webhooks, transaction states,
+              validation, and error handling.</li>
+            <li>Refactored Laravel modules and MySQL database logic to resolve functional and data defects and improve
+              maintainability.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3>Junior Developer</h3><time>Jun 2022 - Dec 2022</time>
+          </div>
+          <p class="company">Desktop IT</p>
+          <ul>
+            <li>Collaborated with senior developers to implement and integrate application modules using established
+              architecture and coding standards.</li>
+            <li>Investigated application and database defects and supported debugging, testing, regression validation,
+              and release preparation.</li>
+            <li>Applied code-review feedback and participated in daily technical coordination to support consistent team
+              delivery.</li>
+          </ul>
+        </article>
+      </section>
+    </article>
+
+    <article class="cv-page" aria-label="CV page 2">
+      <section aria-labelledby="projects-title">
+        <h2 class="section-title" id="projects-title">Projects</h2>
+
+
+        <article class="project">
+          <h3>Astha Academy School Management Software</h3>
+
+          <p class="project-url">
+            <span class="label">Project URL:</span>
+            <a href="https://asthacademy.com/" target="_blank" rel="noopener noreferrer">
+              https://asthacademy.com/
+            </a>
+          </p>
+
+          <p>
+            <span class="label">Description:</span>
+            A comprehensive school management platform covering student admissions, attendance,
+            class and section management, examinations, results, fees, accounting, teacher
+            management, academic activities, notices, and administrative operations.
+          </p>
+
+          <p>
+            <span class="label">Contribution:</span>
+            Developed and integrated modular Laravel features, connected academic and financial
+            workflows, implemented role-based permissions, and created dynamic reports and
+            configurable administrative tools.
+          </p>
+
+          <p>
+            <span class="label">Technology:</span>
+            Laravel, PHP, MySQL, JavaScript, Bootstrap, REST APIs, PDF and report generation
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>ABC Bioscience Coaching Management Software</h3>
+
+          <p class="project-url">
+            <span class="label">Project URL:</span>
+            <a href="https://abcbioscience.com/" target="_blank" rel="noopener noreferrer">
+              https://abcbioscience.com/
+            </a>
+          </p>
+
+          <p>
+            <span class="label">Description:</span>
+            A complete coaching management platform covering student registration, course and
+            batch management, class schedules, attendance, examinations, results, payments,
+            study materials, notices, and student performance tracking.
+          </p>
+
+          <p>
+            <span class="label">Contribution:</span>
+            Built dynamic Laravel modules, connected student, course, examination, and payment
+            workflows, implemented secure role-based access, and developed configurable reports
+            for efficient academic and administrative management.
+          </p>
+
+          <p>
+            <span class="label">Technology:</span>
+            Laravel, PHP, MySQL, JavaScript, Bootstrap, REST APIs, PDF and report generation
+          </p>
+          
+        </article>
+
+        <article class="project">
+          <h3>Aiyat Clinic Management Software</h3>
+          <p class="project-url"><span class="label">Project URL:</span> https://aiyat.com/</p>
+          <p><span class="label">Description:</span> Clinic platform covering IPD, OPD, HR, payroll, billing, invoicing,
+            sample collection, testing, and medical reports.</p>
+          <p><span class="label">Contribution:</span> Developed modular Laravel services, connected patient, billing,
+            and laboratory workflows, and implemented permissions and configurable reports.</p>
+          <p><span class="label">Technology:</span> Laravel, PHP, MySQL, JavaScript, REST APIs, PDF and report
+            generation</p>
+        </article>
+
+        <!-- <article class="project">
+          <h3>Amlaek Real Estate Platform and Noorixa ERP</h3>
+          <p class="project-url"><span class="label">Project URLs:</span> https://amlaek.com/ | https://erp.amlaek.com/
+          </p>
+          <p><span class="label">Description:</span> Commercial real estate platform and ERP for projects, tasks, teams,
+            time tracking, CRM, reports, and analytics.</p>
+          <p><span class="label">Contribution:</span> Built role-based listing and service workflows and connected
+            projects, tasks, time entries, customer records, and management reporting.</p>
+          <p><span class="label">Technology:</span> Laravel, PHP, MySQL, JavaScript, REST APIs, RBAC, analytics,
+            reporting</p>
+        </article> -->
+
+        <article class="project">
+          <h3>UnionDesk and Khadim Nagar Union Parishad Portal</h3>
+          <p class="project-url"><span class="label">Project URLs:</span> https://khadimnagarup.com/ |
+            https://uniondex.xyz/</p>
+          <p><span class="label">Description:</span> Civic-service platform for certificates, application tracking,
+            verification, holding tax, public information, and service records.</p>
+          <p><span class="label">Contribution:</span> Built submission, review, approval, status tracking, verification,
+            searchable-record, and report-generation workflows.</p>
+          <p><span class="label">Technology:</span> Laravel, PHP, MySQL, JavaScript, role-based administration, document
+            generation, reporting</p>
+        </article>
+      </section>
+
+      <section aria-labelledby="education-title">
+        <h2 class="section-title" id="education-title">Education</h2>
+        <p class="education-item"><strong>Diploma in Computer Engineering</strong> | Thakurgaon Polytechnic Institute |
+          2021 | CGPA 3.61/4.00</p>
+        <p class="education-item"><strong>Secondary School Certificate (Science)</strong> | Nouton Bandar Bangheri High
+          School | 2017 | GPA 4.23/5.00</p>
+      </section>
+
+      <section aria-labelledby="languages-title">
+        <h2 class="section-title" id="languages-title">Languages</h2>
+        <p class="languages">Bangla: Native | English: Professional working proficiency</p>
+      </section>
+    </article>
+  </main>
 </body>
+
 </html>

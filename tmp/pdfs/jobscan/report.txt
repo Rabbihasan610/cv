@@ -1,0 +1,113 @@
+Match Report
+Tech Lab33 Limited - Web & Software Developer
+
+
+
+
+         55
+                           Hard Skills               Soft Skills            Searchability              Recruiter Tips
+                           14 issues                 4 issues               1 issue                    1 issue
+
+
+
+Searchability
+  ATS Tip                           We weren't able to match the company (Tech Lab33 Limited) and web address () you added
+                                    to a known ATS.
+
+  Contact Information               You provided your physical address. Recruiters use your address to validate your location
+                                    for job matches.
+                                    You provided your email. Recruiters use your email to contact you for job matches.
+                                    You provided your phone number.
+
+  Section Headings                  We found the education section in your resume.
+                                    We found the work experience section in your resume.
+                                    We found work history in your resume.
+
+  Job Title Match                   The job title 'Web & Software Developer' from the job description was not found in your
+                                    resume. We recommend having the exact title of the job for which you're applying in your
+                                    resume. This ensures you'll be found when a recruiter searches by job title. If you haven't
+                                    held this position before, include it as part of your summary statement.
+
+  Date Formatting                   The dates in your work experience section are properly formatted.
+
+  Education Match                   Your education matches the preferred (ged) education listed in the job description.
+
+
+
+Hard Skills
+ Skill                                                                                Resume               Job Description
+ Cross-browser compatibility                                                                               1
+
+ Version Control Systems                                                                                   1
+
+ Project Deployment                                                                                        1
+
+ Project Planning                                                                                          1
+
+ Web Applications                                                                                          1
+Api integration                                                                        1
+
+Troubleshoot                                                                           1
+
+E-Commerce                                                                             1
+
+Security                                                                               1
+
+Cpanel                                                                                 1
+
+SMS                                                                                    1
+
+Web development                                                    1                   2
+
+Javascript                                                         1                   1
+
+Debugging                                                          2                   2
+
+Laravel                                                            5                   2
+
+Github                                                             3                   1
+
+Vue.js                                                             1                   1
+
+Linux                                                              2                   1
+
+Mysql                                                              5                   1
+
+HTML                                                               1                   1
+
+CSS                                                                2                   1
+
+PHP                                                                3                   1
+
+ERP                                                                4                   1
+
+
+Soft Skills
+Skill                                                              Resume              Job Description
+Communication                                                                          1
+
+Motivated                                                                              1
+
+Analytical                                                         1                   1
+
+
+Recruiter Tips
+ Summary          We found a summary section on your resume. Good job! The summary provides a quick
+                  overview of the candidate's qualifications, helping recruiters and hiring managers promptly
+                  grasp the value the candidate can offer in the position.
+Job Level Match      Your years of experience align with the role's requirements. This is a positive start, but
+                     remember to carefully review all other job criteria to ensure you're a strong overall match
+                     before applying.
+
+Measurable Results   We found 0 mentions of measurable results in your resume. Consider adding at least 5
+                     specific achievements or impact you had in your job (e.g. time saved, increase in sales, etc).
+
+Resume Tone          The tone of your resume is generally positive and no common cliches and buzzwords were
+                     found. Good job!
+
+Web Presence         Nice - You've linked to a website that builds your web credibility. Recruiters appreciate the
+                     convenience and credibility associated with a professional website.
+
+Word Count           There are 490 words in your resume, which is under the suggested 1000 word count for
+                     relevance and ease of reading reasons.
+

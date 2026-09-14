@@ -1,0 +1,95 @@
+                                MD RABBI HASAN
+                 Mid-Level PHP Developer | Laravel | MySQL | REST APIs
+                    Dhaka, Bangladesh | +880 1710-528972 | mdrabbihasan610@gmail.com
+                    github.com/Rabbihasan610 | linkedin.com/in/md-rabbi-hasan-2229bb205
+
+PROFESSIONAL SUMMARY
+PHP and Laravel developer with more than three years of relevant experience delivering and maintaining
+production applications across ERP, CRM, healthcare, civic services, billing, and logistics. Experienced
+with MySQL and SQL database workflows, RESTful API development and integration, object-oriented
+programming, and maintainable backend systems. Supports production issue diagnosis, debugging,
+releases, and deployment across Linux, VPS, and Nginx environments.
+SKILLS & EXPERTISE
+• PHP                                                  • JavaScript
+• Laravel                                              • Vue.js
+• MySQL                                                • React
+• REST APIs                                            • Bootstrap
+• Object-oriented programming                          • Tailwind CSS
+• SQL                                                  • Git
+• Redis                                                • GitHub
+• Caching                                              • Linux
+• HTML5                                                • VPS deployment
+• CSS3                                                 • Nginx
+WORK EXPERIENCE
+Full-Stack Developer                                                                    Jan 2024 - Present
+Riyadh Online | Full-time
+   Develop and maintain Laravel modules across CRM, ERP, union-service, courier-management, and
+   template-based platforms.
+   Translate operational requirements into reusable services, RESTful APIs, role-based workflows,
+   MySQL database processes, and reporting components.
+   Diagnose production issues, trace root causes, and implement controlled fixes that protect data
+   integrity and existing business workflows.
+   Integrate third-party services and support technical changes, releases, and production deployment
+   with product and operations stakeholders.
+Full-Stack Developer                                                               Jan 2023 - Dec 2023
+TDevs | Full-time | Tungi, Gazipur
+  Delivered client-specific HRM and CodeCanyon features after reviewing application architecture,
+  dependencies, and customization constraints.
+  Designed and implemented payment gateway integrations covering callbacks, webhooks, transaction
+  states, validation, and error handling.
+  Refactored Laravel modules and MySQL database logic to resolve functional and data defects and
+  improve maintainability.
+Junior Developer                                                                     Jan 2022 - Dec 2022
+Desktop IT | Full-time
+  Collaborated with senior developers to implement and integrate application modules using established
+  architecture and coding standards.
+  Investigated application and database defects and supported debugging, testing, regression
+  validation, and release preparation.
+  Applied code-review feedback and participated in daily technical coordination to support consistent
+  team delivery.
+SELECTED PROJECTS
+Aiyat Clinic Management Software
+Project Link: aiyat.com
+Clinic platform covering IPD, OPD, HR, payroll, billing, invoicing, sample collection, testing, and medical
+reports.
+Amlaek Real Estate Platform and Noorixa ERP
+Project Link: amlaek.com
+Commercial real estate platform and ERP for projects, tasks, teams, time tracking, CRM, reports, and
+analytics.
+UnionDesk and Khadim Nagar Union Parishad Portal
+Project Link: khadimnagarup.com
+Civic-service platform for certificates, application tracking, verification, holding tax, public information, and
+service records.
+Union Desk                                                                             Jun 2025 - Jun 2026
+Completed | Professional
+Project Link: uniondesk.xyz
+Digital local-government platform supporting certificate applications, household assessment, holding-tax
+collection, digital payments, smart citizen cards, verification, and service tracking.
+EDUCATION
+Diploma in Computer Engineering                                                                             2021
+Thakurgaon Polytechnic Institute
+CGPA: 3.61 / 4.00
+Secondary School Certificate                                                                                2017
+Nouton Bandar Bangheri High School
+GPA: 4.23 / 5.00
+
+
+TRAINING
+Web Design and Development
+LEDP | Offline
+Professional Web Development
+Creative IT | Offline
+
+LANGUAGES
+Bangla: Native
+English: Professional working proficiency
+
+
+VOLUNTEER EXPERIENCE
+SEQAEP
+Volunteer | Social Work
+REFERENCES
+Mhr Habib                                                 Ashaduzzaman Faruque
+Senior Engineer, Agent To ROI                             Software Engineer, Soft Valley
+Phone: +880 1684-208275                                   Phone: +880 1648-583443
+

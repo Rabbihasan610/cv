@@ -1,0 +1,125 @@
+MD RABBI HASAN                                                               mdrabbi-
+                                                                             hasan610@gmail.com
+Mid-Level PHP Developer | Laravel | MySQL | REST                             01710528972
+APIs
+                                                                             Dhaka, Bangladesh
+PHP and Laravel developer with more than three years of rele-                https://github.-
+vant experience delivering and maintaining production applications           com/-
+across ERP, CRM, healthcare, civic services, billing, and logistics.         Rabbihasan610
+Experienced with MySQL and SQL database workflows, RESTful                   https://www.-
+                                                                             linkedin.com/in/-
+API development and integration, object-oriented programming, and
+                                                                             md-rabbi-hasan--
+maintainable backend systems. Supports production issue diagno-              2229bb205
+sis, debugging, releases, and deployment across Linux, VPS, and
+Nginx environments.
+
+                                                                               Skills & Expertise
+Work Experience
+                                                                               • PHP                    • JavaScript
+Full-Stack Developer
+                                                       Jan 2024 - Present      • Laravel                • Vue.js
+Riyadh Online • Full-time
+- Develop and maintain Laravel modules across CRM, ERP, union-service,         • MySQL                  • React
+courier-management, and template-based platforms.                              • REST APIs              • Bootstrap
+- Translate operational requirements into reusable services, RESTful APIs,
+role-based workflows, MySQL database processes, and reporting compo-           • Object-oriented        • Tailwind CSS
+nents.                                                                         programming
+                                                                                                        • Git
+- Diagnose production issues, trace root causes, and implement controlled
+                                                                               • SQL
+fixes that protect data integrity and existing business workflows.                                      • GitHub
+- Integrate third-party services and support technical changes, releases,      • Redis
+and production deployment with product and operations stakeholders.                                     • Linux
+                                                                               • Caching
+                                                                                                        • VPS deployment
+Full-Stack Developer                                                           • HTML5
+                                                                                                        • Nginx
+TDevs • Full-time                                    Jan 2023 - Dec 2023
+                                                                               • CSS3
+Tungi, Gazipur
+- Delivered client-specific HRM and CodeCanyon features after review-
+                                                                                Language
+ing application architecture, dependencies, and customization con-
+straints. - Designed and implemented payment gateway integrations cov-
+                                                                                Bangla
+ering callbacks, webhooks, transaction states, validation, and error han-
+dling. - Refactored Laravel modules and MySQL database logic to re-             Reading Level: Native
+solve functional and data defects and improve maintainability.                  Writing Level: Native
+                                                                                Speaking Level: Native
+Junior Developer                                                                English
+                                                     Jan 2022 - Dec 2022
+Desktop IT • Full-time                                                          Reading Level: Professional working profi-
+                                                                                ciency
+- Collaborated with senior developers to implement and integrate applica-
+tion modules using established architecture and coding standards. - Inves-      Writing Level: Professional working profi-
+tigated application and database defects and supported debugging, test-         ciency
+ing, regression validation, and release preparation. - Applied code-re-         Speaking Level: Professional working profi-
+view feedback and participated in daily technical coordination to sup-          ciency
+port consistent team delivery.
+
+
+Education
+
+Diploma in Computer Engineering                                      2021
+Thakurgaon Polytechnic Institute
+GPA / CGPA: 3.61 / / 4.00
+SSC                                                                        2017
+Nouton Bandar Bangheri High School
+GPA / CGPA: 4.23 / / 5.00
+
+
+Training & Certification
+
+Web Design and Development
+LEDP • Offline
+
+
+Professonal Web Development
+Creative IT • Offline
+
+
+Projects
+
+Aiyat Clinic Management Software
+Project Link: https://aiyat.com/
+Clinic platform covering IPD, OPD, HR, payroll, billing, invoicing, sample
+collection, testing, and medical reports.
+
+
+Amlaek Real Estate Platform and Noorixa ERP
+Project Link: https://amlaek.com/
+Commercial real estate platform and ERP for projects, tasks, teams, time
+tracking, CRM, reports, and analytics.
+
+
+UnionDesk and Khadim Nagar Union Parishad Portal
+Project Link: https://khadimnagarup.com/
+Civic-service platform for certificates, application tracking, verification,
+holding tax, public information, and service records.
+
+
+Union Desk
+Completed • Professional                                 Jun 2025 - Jun 2026
+Project Link: https://uniondesk.xyz
+Union Desk is a digital local government service platform designed to sim-
+plify citizen services through a centralized online system. It supports on-
+line applications for certificates, household assessment, holding tax col-
+lection, digital payments, smart citizen cards, certificate verifica-
+tion, and service tracking. Citizens can apply for and receive vari-
+ous Union Parishad services remotely.
+
+
+Volunteer Experience
+
+SEQAEP
+Volunteer • social_work
+
+
+References
+
+Mhr Habib                                Ashaduzzaman Faruque
+Senior Engineer                          Software Engineer
+Agent To ROI                             Soft Valley
+    Phone: +8801684208275                     Phone: +8801648583443
+

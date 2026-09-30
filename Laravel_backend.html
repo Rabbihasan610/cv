@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Curriculum vitae of Md Rabbi Hasan, Mid-Level PHP Developer.">
+    <title>Md Rabbi Hasan - CV</title>
+    <style>
+        :root {
+            --ink: #172027;
+            --muted: #4b5961;
+            --accent: #155e75;
+            --paper: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0
+        }
+
+        body {
+            background: #e8ecef;
+            color: var(--ink);
+            font: 12pt/1.3 Arial, Helvetica, sans-serif
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .tools {
+            width: min(8.27in, calc(100% - 32px));
+            margin: 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--muted);
+            font-size: 10pt
+        }
+
+        .tools p {
+            margin: 0
+        }
+
+        button {
+            border: 0;
+            border-radius: 4px;
+            padding: 10px 16px;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        .page {
+            width: 8.27in;
+            height: 11.69in;
+            margin: 0 auto 18px;
+            padding: .42in .58in;
+            overflow: hidden;
+            background: var(--paper);
+            box-shadow: 0 8px 25px #0002
+        }
+
+        .name {
+            margin: 0;
+            font-size: 24pt;
+            line-height: 1.1;
+            text-align: center;
+            text-transform: uppercase
+        }
+
+        .title {
+            margin: 5px 0 6px;
+            color: var(--accent);
+            font-size: 14pt;
+            font-weight: 700;
+            text-align: center
+        }
+
+        .contact {
+            margin: 0;
+            font-size: 10.5pt;
+            line-height: 1.35;
+            text-align: center
+        }
+
+        .contact span {
+            white-space: nowrap
+        }
+
+        section {
+            margin-top: 8px
+        }
+
+        .section-title {
+            margin: 0 0 4px;
+            padding-bottom: 2px;
+            border-bottom: 1.5px solid var(--accent);
+            color: var(--accent);
+            font-size: 14pt;
+            line-height: 1.2;
+            text-transform: uppercase
+        }
+
+        p {
+            margin: 0
+        }
+
+        .summary {
+            text-align: justify
+        }
+
+        .job,
+        .project,
+        .item,
+        .reference {
+            break-inside: avoid
+        }
+
+        .job,
+        .project {
+            margin-top: 6px
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 12.5pt;
+            line-height: 1.2
+        }
+
+        time {
+            flex: 0 0 auto;
+            font-size: 11pt;
+            font-weight: 700
+        }
+
+        .meta {
+            margin: 0 0 2px;
+            color: var(--muted);
+            font-weight: 700
+        }
+
+        ul {
+            margin: 2px 0 0;
+            padding-left: 19px
+        }
+
+        li {
+            margin: 0
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 28px
+        }
+
+        .skills p:before {
+            content: "• ";
+            color: var(--accent);
+            font-weight: 700
+        }
+
+        .project p {
+            margin-top: 2px
+        }
+
+        .label {
+            font-weight: 700
+        }
+
+        .item {
+            margin: 6px 0
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px
+        }
+
+        .reference p {
+            margin-top: 2px
+        }
+
+        @media(max-width:850px) {
+            .page {
+                width: 100%;
+                height: auto;
+                min-height: 11.69in;
+                box-shadow: none
+            }
+
+            .contact span {
+                white-space: normal
+            }
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0
+            }
+
+            html,
+            body {
+                background: #fff
+            }
+
+            .screen {
+                display: none !important
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                break-after: page
+            }
+
+            .page:last-child {
+                break-after: auto
+            }
+
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact
+            }
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px
+        }
+
+        .details section {
+            margin-top: 8px
+        }
+
+        .contact-highlight {
+            display: inline-block;
+            padding: 1px 5px;
+            border-radius: 3px;
+            background: #e5f2f5;
+            color: var(--accent);
+            font-weight: 700
+        }
+
+        @media(max-width:850px) {
+            .details {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tools screen">
+        <p>Professional two-page A4 CV with standard 12pt body text.</p><button onclick="print()">Export CV as
+            PDF</button>
+    </div>
+    <main>
+        <article class="page">
+            <header>
+                <h1 class="name">MD RABBI HASAN</h1>
+                <p class="title">Laravel Backend Developer</p>
+                <p class="contact"><span>dhaka, Bangladesh</span> | <span class="contact-highlight">+880
+                        1710-528972</span> | <span class="contact-highlight"><a
+                            href="mailto:mdrabbihasan610@gmail.com">mdrabbihasan610@gmail.com</a></span><br><span><a
+                            href="http://github.com/Rabbihasan610">github.com/Rabbihasan610</a></span> | <span><a
+                            href="http://linkedin.com/in/md-rabbi-hasan-2229bb205">linkedin.com/in/md-rabbi-hasan-2229bb205</a></span>
+                </p>
+            </header>
+            <section>
+                <h2 class="section-title">Summary</h2>
+                <p class="summary">Backend-focused PHP and Laravel developer with 5+ years of verified professional experience architecting and scaling e-commerce platforms, ERP, CRM, and billing systems. Specialized in optimization, background queues, and automated testing (PHPUnit/Pest). Proven track record of reducing latency, resolving architectural bottlenecks, and ensuring transactional integrity across production environments.</p>
+            </section>
+            <section>
+                <h2 class="section-title">Skills &amp; Expertise</h2>
+                <div class="skills">
+                    <p>PHP &amp; Laravel</p>
+                    <p>MySQL &amp; Redis</p>
+                    <p>Payment Gateways &amp; Webhooks</p>
+                    <p>REST APIs &amp; Throughput Optimization</p>
+                    <p>Background Queues &amp; Jobs</p>
+                    <p>PHPUnit &amp; Pest Testing</p>
+                    <p>Eloquent Query Optimization</p>
+                    <p>E-commerce, ERP &amp; Billing</p>
+                    <p>Docker &amp; DevOps</p>
+                    <p>Git &amp; CI/CD Pipelines</p>
+                    <p>Linux, Nginx &amp; VPS Deployment</p>
+                    <p>Database Architecture &amp; Indexing</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Experience</h2>
+                <div class="job">
+                    <div class="heading">
+                        <h3>Laravel Backend Developer</h3><time>Jan 2022 - Present</time>
+                    </div>
+                    <p class="meta">Riyadh Online | [Location]</p>
+                    <ul>
+                        <li>Architected scalable Laravel backend modules for ERP, accounting, and e-commerce platforms, handling high API throughput and reducing response latency via Eloquent query optimization and database indexing.</li>
+                        <li>Engineered payment gateway integrations, managing complex webhook lifecycles, transaction states, and automated billing mechanisms.</li>
+                        <li>Automated core business processes utilizing background queues, scheduled jobs, and Redis caching, significantly improving system reliability under concurrent load.</li>
+                        <li>Established rigorous testing protocols using PHPUnit and Pest, effectively eliminating critical transactional defects and ensuring zero-downtime deployments.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <div class="heading">
+                        <h3>Backend Developer</h3><time>Jan 2020 - Dec 2021</time>
+                    </div>
+                    <p class="meta">TDevs | Tungi, Gazipur</p>
+                    <ul>
+                        <li>Refactored legacy Laravel modules and complex MySQL database schemas for HRM and e-commerce applications, improving query performance through strategic indexing.</li>
+                        <li>Designed and implemented sophisticated inventory tracking and dynamic order processing features, actively resolving critical transactional bottlenecks.</li>
+                        <li>Secured third-party service integrations by enforcing strict input validation, rate limiting, and robust error handling across all REST API endpoints.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <div class="heading">
+                        <h3>Junior Developer</h3><time>Jan 2018 - Dec 2019</time>
+                    </div>
+                    <p class="meta">Desktop IT | [Location]</p>
+                    <ul>
+                        <li>Collaborated with senior engineers to construct foundational application modules, adhering to object-oriented programming principles and established coding standards.</li>
+                        <li>Investigated and resolved underlying database anomalies, significantly contributing to the reduction of reported bugs and regression issues.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+        <article class="page">
+            <section>
+                <h2 class="section-title">Languages</h2>
+                <p><span class="label">Bangla:</span> Native; <span class="label">English:</span> Professional working proficiency</p>
+            </section>
+            <section>
+                <h2 class="section-title">Education</h2>
+                <div class="item">
+                    <div class="heading">
+                        <h3>BSc in Computer Science Engineering</h3><time>2024, Running</time>
+                    </div>
+                    <p>Northern University Bangladesh</p>
+                </div>
+                <div class="item">
+                    <div class="heading">
+                        <h3>Diploma in Computer Engineering</h3><time>2021</time>
+                    </div>
+                    <p>Thakurgaon Polytechnic Institute</p>
+                </div>
+                <div class="item">
+                    <div class="heading">
+                        <h3>Secondary School Certificate</h3><time>2017</time>
+                    </div>
+                    <p>Nouton Bandar Bangheri High School</p>
+                    <p>GPA: 4.23 / 5.00</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Training</h2>
+                <div class="item">
+                    <div class="heading">
+                        <h3>Web Design and Development</h3>
+                    </div>
+                    <p>LEDP | Offline</p>
+                </div>
+                <div class="item">
+                    <div class="heading">
+                        <h3>Professional Web Development</h3>
+                    </div>
+                    <p>Creative IT | Offline</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Projects</h2>
+                <div class="project">
+                    <div class="heading">
+                        <h3>UnionDesk &amp; Khadim Nagar Union Parishad Portal</h3>
+                    </div>
+                    <p><span class="label">Project Link:</span> <a href="https://uniondesk.xyz">uniondesk.xyz</a></p>
+                    <p>Engineered a digital local-government platform managing dynamic certificate services, household assessments, and holding-tax accounting. Integrated seamless digital payment lifecycles and smart citizen verification systems.</p>
+                </div>
+                <div class="project">
+                    <div class="heading">
+                        <h3>Aiyat Clinic Management Software</h3>
+                    </div>
+                    <p><span class="label">Project Link:</span> <a href="http://aiyat.com/">aiyat.com</a></p>
+                    <p>Developed dynamic medical-test reporting, IPD/OPD management, and intricate billing and payroll workflows, utilizing scheduled jobs for automated daily financial reconciliation.</p>
+                </div>
+                <div class="project">
+                    <div class="heading">
+                        <h3>Amlaek Real Estate Platform and Noorixa ERP</h3>
+                    </div>
+                    <p><span class="label">Project Link:</span> <a href="http://amlaek.com/">amlaek.com</a></p>
+                    <p>Built robust backend infrastructure for time tracking, CRM, complex accounting, and detailed analytics within a high-traffic commercial real-estate ecosystem.</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Volunteer Experience</h2>
+                <div class="job">
+                    <div class="heading">
+                        <h3>Volunteer</h3><time>01/01/2019 - 01/01/2020</time>
+                    </div>
+                    <p class="meta">SEQAEP | Panchagarh Sadar, Panchagarh</p>
+                    <p>Social Work</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">References</h2>
+                <div class="columns">
+                    <div class="reference">
+                        <h3>Mhr Habib</h3>
+                        <p>Senior Engineer, Agent To ROI</p>
+                        <p><span class="label">Phone:</span> +880 1684-208275</p>
+                    </div>
+                    <div class="reference">
+                        <h3>Ashaduzzaman Faruque</h3>
+                        <p>Software Engineer, Soft Valley</p>
+                        <p><span class="label">Phone:</span> +880 1648-583443</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

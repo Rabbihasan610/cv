@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 <link rel="canonical" href="https://rabbihasan.site/" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Md Rabbi Hasan | Senior Laravel & PHP Developer">
@@ -25,17 +25,17 @@
   <meta name="twitter:image" content="https://rabbihasan.site/assets/images/og-cover.jpg">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+  "@@context": "https://schema.org",
+  "@@graph": [
     {
-      "@type": "Person",
+      "@@type": "Person",
       "name": "Md Rabbi Hasan",
       "jobTitle": "Senior Laravel & PHP Developer",
       "url": "https://rabbihasan.site/",
       "sameAs": [
-        "https://www.facebook.com/rabbihasan610",
-        "https://www.linkedin.com/in/rabbihasan610/",
-        "https://github.com/rabbihasan610"
+        "{{ \App\Models\Setting::where('key', 'facebook')->value('value') ?? 'https://www.facebook.com/rabbihasan610' }}",
+        "{{ \App\Models\Setting::where('key', 'linkedin')->value('value') ?? 'https://www.linkedin.com/in/rabbihasan610/' }}",
+        "{{ \App\Models\Setting::where('key', 'github')->value('value') ?? 'https://github.com/rabbihasan610' }}"
       ],
       "knowsAbout": [
         "Laravel",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "@type": "WebSite",
+      "@@type": "WebSite",
       "url": "https://rabbihasan.site/",
       "name": "Md Rabbi Hasan | Senior Laravel & PHP Developer"
     }
@@ -99,8 +99,8 @@
             <a class="button button-secondary" href="/contact">Contact Me <i class="fa-regular fa-envelope"></i></a>
           </div>
           <div class="hero-trust" style="margin-top:1rem;">
-            <a href="https://github.com/rabbihasan610" target="_blank" style="color: inherit; margin-right: 1rem;"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/rabbihasan610/" target="_blank" style="color: inherit;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="{{ \App\Models\Setting::where('key', 'github')->value('value') ?? 'https://github.com/rabbihasan610' }}" target="_blank" style="color: inherit; margin-right: 1rem;"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="{{ \App\Models\Setting::where('key', 'linkedin')->value('value') ?? 'https://www.linkedin.com/in/rabbihasan610/' }}" target="_blank" style="color: inherit;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           </div>
         </div>
         <div class="architecture-wrap reveal" aria-label="Backend architecture visualization">
@@ -233,24 +233,49 @@
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <a class="logo" href="/"><span class="logo-mark">RH</span><span>Md Rabbi Hasan</span></a>
-      <p>Senior Laravel & PHP Developer</p>
-      <p>Laravel • PHP • React • REST API • SaaS</p>
-      <div class="footer-links" style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <div class="container footer-inner" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem; padding: 4rem 0;">
+      
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <a class="logo" href="/"><span class="logo-mark">RH</span><span>Md Rabbi Hasan</span></a>
+          <p style="color: var(--muted);">Senior Laravel & PHP Developer</p>
+      </div>
+
+      <div class="footer-links" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
         <a href="/">Home</a>
         <a href="/about">About</a>
-        <a href="/services">Services</a>
+        <a href="/experience">Experience</a>
         <a href="/projects">Projects</a>
         <a href="/blog">Blog</a>
+        <a href="/cv">CV</a>
         <a href="/contact">Contact</a>
       </div>
-      <div class="footer-social" style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
-        <a href="https://github.com/rabbihasan610" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/rabbihasan610/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <a href="https://www.facebook.com/rabbihasan610" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      
+      <div class="footer-subscribe" style="width: 100%; max-width: 500px; padding: 2rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px;">
+        <h4 style="margin-bottom: 0.5rem; color: var(--primary);">Join my technical newsletter</h4>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--muted);">Insights on Laravel, architecture, and scalable backends.</p>
+        <form action="/subscribe" method="POST" style="display: flex; gap: 0.5rem;">
+          @csrf
+          <input type="email" name="email" placeholder="Email address" required style="flex-grow: 1; padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--line); background: var(--card-solid); color: var(--text); outline: none;">
+          <button type="submit" class="button button-primary" style="padding: 0.75rem 1.5rem; cursor: pointer;">Subscribe</button>
+        </form>
+        @if(session('success'))
+            <p style="color: var(--primary); margin-top: 1rem; font-size: 0.875rem;">{{ session('success') }}</p>
+        @endif
       </div>
-      <p style="margin-top: 2rem;">© <span id="year">2026</span> Md Rabbi Hasan.</p>
+
+      <div class="footer-coffee">
+        <a href="{{ \App\Models\Setting::where('key', 'buy_me_a_coffee')->value('value') ?? '#' }}" target="_blank" class="button button-secondary" style="font-size: 0.875rem; padding: 0.5rem 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-mug-hot"></i> Support my work
+        </a>
+      </div>
+    
+      <div class="footer-social" style="display: flex; gap: 1.5rem; justify-content: center; font-size: 1.25rem;">
+        <a href="{{ \App\Models\Setting::where('key', 'github')->value('value') ?? 'https://github.com/rabbihasan610' }}" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="{{ \App\Models\Setting::where('key', 'linkedin')->value('value') ?? 'https://www.linkedin.com/in/rabbihasan610/' }}" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="{{ \App\Models\Setting::where('key', 'facebook')->value('value') ?? 'https://www.facebook.com/rabbihasan610' }}" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      
+      <p style="color: var(--muted); font-size: 0.875rem;">© <span id="year">2026</span> Md Rabbi Hasan. All rights reserved.</p>
     </div>
   </footer>
 
@@ -259,6 +284,6 @@
     <div id="modal-content"></div>
   </dialog>
 
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 </html>

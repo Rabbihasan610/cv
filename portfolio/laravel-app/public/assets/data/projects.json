@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Aiyaat Clinic Management Software",
+    "image": "assets/images/project-aiyat.jpg",
+    "technology": "PHP, Laravel, MySQL",
+    "purpos": "Clinic Management",
+    "descrtion": "Developed dynamic medical-test report management and print-ready reporting workflows alongside IPD, OPD, billing, invoicing, sample collection, payroll, and accounting functionality.",
+    "url": "http://aiyaat.com"
+  },
+  {
+    "title": "Amlaek Real Estate Platform and Noorixa ERP",
+    "image": "assets/images/project-amlaek.jpg",
+    "technology": "PHP, Laravel, MySQL",
+    "purpos": "Real Estate Platform and ERP",
+    "descrtion": "Developed workflows for projects, tasks, teams, time tracking, CRM, accounting, reporting, and analytics within a commercial real-estate platform and ERP.",
+    "url": "http://amlaek.com"
+  },
+  {
+    "title": "UnionDesk and Khadim Nagar Union Parishad Portal",
+    "image": "assets/images/project-khadimnagar.jpg",
+    "technology": "PHP, Laravel, MySQL",
+    "purpos": "Union Parishad Portal",
+    "descrtion": "Built dynamic management for multiple certificate types, including application processing, configurable certificate generation, verification, printing, holding tax, and service records.",
+    "url": "http://khadimnagarup.com"
+  },
+  {
+    "title": "Union Desk",
+    "image": "assets/images/project-uniondesk.jpg",
+    "technology": "PHP, Laravel, MySQL",
+    "purpos": "Digital local-government platform",
+    "descrtion": "Delivered a digital local-government platform with dynamic certificate services, household assessment, holding-tax accounting, digital payments, smart citizen cards, verification, and service tracking.",
+    "url": "http://uniondesk.xyz"
+  }
+]
